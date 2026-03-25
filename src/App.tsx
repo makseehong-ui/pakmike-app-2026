@@ -96,13 +96,18 @@ const Header = () => (
       </div>
       <span className="font-bold tracking-tight text-lg">Pakmike Technology</span>
     </div>
-    <button className="bg-brand-blue hover:bg-blue-600 text-white px-4 py-1.5 rounded-full text-sm font-semibold transition-colors blue-glow">
+    <a 
+      href="https://wa.me/60175162938" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="bg-brand-blue hover:bg-blue-600 text-white px-4 py-1.5 rounded-full text-sm font-semibold transition-colors blue-glow"
+    >
       Call Now
-    </button>
+    </a>
   </header>
 );
 
-import { Shield, Zap, Fence, DoorClosed } from 'lucide-react';
+import { Fence, DoorClosed } from 'lucide-react';
 
 const HomeScreen = ({ setActiveTab }: { setActiveTab: (t: string) => void }) => {
   const services = [
@@ -167,10 +172,10 @@ const HomeScreen = ({ setActiveTab }: { setActiveTab: (t: string) => void }) => 
           <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Trusted Partners</span>
           <span className="text-sm font-bold">Authorized Partner</span>
         </div>
-        <div className="flex items-center gap-4 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all">
-          <img src="./assets/images/1280px-Hikvision_logo.svg.png" alt="Hikvision" className="h-4" referrerPolicy="no-referrer" />
-          <div className="w-px h-6 bg-white/10" />
-          <img src="./assets/images/Dahua_Technology_logo.svg.png" alt="Dahua" className="h-4" referrerPolicy="no-referrer" />
+        <div className="flex items-center gap-6 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all">
+          <img src="./assets/images/hikvision.svg" alt="Hikvision" className="h-6" referrerPolicy="no-referrer" />
+          <div className="w-px h-8 bg-white/10" />
+          <img src="./assets/images/dahua.svg" alt="Dahua" className="h-6" referrerPolicy="no-referrer" />
         </div>
       </section>
 
