@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { 
-  Home as HomeIcon, 
-  LayoutGrid, 
-  Settings, 
-  User, 
-  MessageSquare, 
-  Image as ImageIcon, 
-  Phone, 
-  Shield, 
-  Zap, 
-  Wrench, 
+import {
+  Home as HomeIcon,
+  LayoutGrid,
+  Settings,
+  User,
+  MessageSquare,
+  Image as ImageIcon,
+  Phone,
+  Shield,
+  Zap,
+  Wrench,
   Lightbulb,
   MapPin,
   Clock,
@@ -44,10 +44,10 @@ import ReactMarkdown from "react-markdown";
 const Footer = () => (
   <footer className="text-center space-y-4 py-12 border-t border-white/5 mt-8">
     <div className="flex justify-center gap-6">
-      <a href="https://facebook.com/pakmiketechnology" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-blue transition-colors">
+      <a href="https://facebook.com/myintsolutions" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-blue transition-colors">
         <Facebook size={20} />
       </a>
-      <a href="https://youtube.com/@pakmiketechnology" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-500 transition-colors">
+      <a href="https://youtube.com/@penangthecctvguy" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-500 transition-colors">
         <Youtube size={20} />
       </a>
     </div>
@@ -116,24 +116,30 @@ const HomeScreen = ({ setActiveTab }: { setActiveTab: (t: string) => void }) => 
     <div className="pt-24 pb-32 px-6 space-y-12">
       {/* Hero Section */}
       <section className="relative h-[400px] rounded-3xl overflow-hidden group">
-        <img 
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" 
-          alt="Modern Building" 
+        <img
+          src="assets/images/unnamed.webp"
+          alt="Modern Building"
           className="w-full h-full object-cover brightness-50 transition-transform duration-700 group-hover:scale-105"
           referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 flex flex-col justify-center px-8 space-y-4">
           <span className="text-brand-blue font-bold tracking-widest text-xs uppercase">Expert Solutions</span>
           <h1 className="text-4xl font-extrabold leading-tight max-w-[280px]">
-            Expert Security & Electrical Services
+            Door Access Control,Cctv & Electrical Services
           </h1>
-          <p className="text-gray-300 text-sm max-w-[240px]">
-            Trusted installations for homes and businesses across Penang.
-          </p>
-          <button className="bg-brand-blue w-fit px-6 py-3 rounded-2xl flex items-center gap-3 font-bold text-lg blue-glow">
-            <Phone size={20} />
-            0175162938
-          </button>
+          <a
+            href="https://wa.me/60175162938"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-fit"
+          >
+            <button className="bg-brand-blue w-fit px-6 py-3 rounded-2xl flex items-center gap-3 font-bold text-lg blue-glow">
+              <Phone size={20} />
+              0175162938 (Whatsapp)
+            </button>
+          </a>
+
+
         </div>
       </section>
 
@@ -144,9 +150,9 @@ const HomeScreen = ({ setActiveTab }: { setActiveTab: (t: string) => void }) => 
           <span className="text-sm font-bold">Authorized Partner</span>
         </div>
         <div className="flex items-center gap-4 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all">
-          <img src="https://www.hikvision.com/content/dam/hikvision/en/marketing/logo/hikvision-logo.png" alt="Hikvision" className="h-4" referrerPolicy="no-referrer" />
+          <img src="assets/images/1280px-Hikvision_logo.svg.png" alt="Hikvision" className="h-4" referrerPolicy="no-referrer" />
           <div className="w-px h-6 bg-white/10" />
-          <img src="https://www.dahuasecurity.com/asset/upload/image/20180524/logo.png" alt="Dahua" className="h-4" referrerPolicy="no-referrer" />
+          <img src="assets/images/Dahua_Technology_logo.svg.png" alt="Dahua" className="h-4" referrerPolicy="no-referrer" />
         </div>
       </section>
 
@@ -174,8 +180,8 @@ const HomeScreen = ({ setActiveTab }: { setActiveTab: (t: string) => void }) => 
         </div>
         <div className="grid grid-cols-2 gap-4">
           {[
-            { brand: "HIKVISION", name: "ColorVu 4MP Dome", img: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=400&auto=format&fit=crop" },
-            { brand: "DAHUA", name: "WizSense 5MP PTZ", img: "https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=400&auto=format&fit=crop" },
+            { brand: "HIKVISION", name: "Hybrid 6MP Varifocal 2.8mm to 12mm", img: "assets/images/6mp-hikvision.webp" },
+            { brand: "DAHUA", name: "Dahua 5MP PTZ", img: "assets/images/dahua.webp" },
           ].map((m, i) => (
             <div key={i} className="glass-card p-4 space-y-3 group cursor-pointer" onClick={() => setActiveTab("products")}>
               <div className="h-24 bg-brand-dark rounded-xl overflow-hidden">
@@ -218,9 +224,9 @@ const HomeScreen = ({ setActiveTab }: { setActiveTab: (t: string) => void }) => 
         <h2 className="text-2xl font-bold text-center">Featured Project</h2>
         <div className="glass-card overflow-hidden group cursor-pointer" onClick={() => setActiveTab("projects")}>
           <div className="h-48 relative">
-            <img 
-              src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=2000&auto=format&fit=crop" 
-              alt="Industrial Warehouse Surveillance" 
+            <img
+              src="assets/images/warehouse-5mp.webp"
+              alt="Industrial Warehouse Surveillance"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               referrerPolicy="no-referrer"
             />
@@ -234,12 +240,12 @@ const HomeScreen = ({ setActiveTab }: { setActiveTab: (t: string) => void }) => 
               <span className="text-brand-blue text-[10px] font-bold uppercase tracking-widest">Industrial Security</span>
               <div className="flex items-center gap-1 text-gray-400 text-[10px]">
                 <MapPin size={10} />
-                Bayan Lepas, Penang
+                Prai, Penang
               </div>
             </div>
             <h3 className="text-xl font-bold leading-tight">Industrial Warehouse Surveillance System</h3>
             <p className="text-xs text-gray-400 leading-relaxed">
-              A comprehensive 64-camera network with AI-powered intrusion detection and 24/7 remote monitoring for a major logistics hub.
+              A comprehensive 8+8 network with AI-powered intrusion detection and 24/7 remote monitoring for a wholesale shop.
             </p>
             <div className="flex items-center gap-2 text-brand-blue text-xs font-bold pt-2">
               View Full Case Study <ChevronRight size={14} />
@@ -274,8 +280,8 @@ const HomeScreen = ({ setActiveTab }: { setActiveTab: (t: string) => void }) => 
         <h2 className="text-2xl font-bold text-center">What Our Clients Say</h2>
         <div className="space-y-4">
           {[
-            { name: "Tan Ah Kow", rating: 5, comment: "Excellent service! The CCTV installation was neat and professional. Highly recommended for security needs in Penang." },
-            { name: "Sarah Lim", rating: 5, comment: "Pakmike team fixed our office wiring issues quickly. Very knowledgeable and friendly technicians." },
+            { name: "SARAVANAN SAMBASIVAM", rating: 5, comment: "give our company good solution,advice and services. trusted vendor and for sure will call him for future project" },
+            { name: "workshop", rating: 5, comment: "A experienced, skilled handyman for all kinds of surveillance system.Very good service with reasonable charge" },
             { name: "Rajesh Kumar", rating: 4, comment: "Good quality Hikvision cameras. The mobile app setup was smooth. Great after-sales support." },
           ].map((t, i) => (
             <div key={i} className="glass-card p-5 space-y-3">
@@ -283,10 +289,10 @@ const HomeScreen = ({ setActiveTab }: { setActiveTab: (t: string) => void }) => 
                 <span className="font-bold text-sm">{t.name}</span>
                 <div className="flex gap-0.5">
                   {[...Array(5)].map((_, starIdx) => (
-                    <Star 
-                      key={starIdx} 
-                      size={12} 
-                      className={cn(starIdx < t.rating ? "text-yellow-500 fill-yellow-500" : "text-gray-600")} 
+                    <Star
+                      key={starIdx}
+                      size={12}
+                      className={cn(starIdx < t.rating ? "text-yellow-500 fill-yellow-500" : "text-gray-600")}
                     />
                   ))}
                 </div>
@@ -302,34 +308,59 @@ const HomeScreen = ({ setActiveTab }: { setActiveTab: (t: string) => void }) => 
         <h2 className="text-2xl font-bold text-center">Our Service Centres</h2>
         <div className="grid grid-cols-1 gap-4">
           {["George Town", "Butterworth", "Bukit Mertajam"].map((city, i) => (
-            <div key={i} className="glass-card p-4 relative overflow-hidden h-32 flex items-end">
-              <img 
-                src={`https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1000&auto=format&fit=crop`} 
-                alt={city} 
-                className="absolute inset-0 w-full h-full object-cover opacity-20"
+            <a
+              key={i}
+              href={`https://maps.app.goo.gl/F75YNNXUUFfNosv86`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-card p-4 relative overflow-hidden h-32 flex items-end group cursor-pointer border border-white/5 hover:border-brand-blue/50 transition-all"
+            >
+              <img
+                src={`public/assets/images/google-maps.svg`}
+                alt={city}
+                className="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition-opacity"
                 referrerPolicy="no-referrer"
               />
               <div className="relative z-10 flex items-center justify-between w-full">
                 <div className="space-y-1">
                   <h3 className="font-bold text-lg">{city}</h3>
-                  <p className="text-xs text-gray-400">{city}, Penang</p>
+                  <p className="text-xs text-gray-400 font-medium uppercase tracking-wider">View on Map</p>
                 </div>
-                <div className="w-10 h-10 bg-brand-blue rounded-full flex items-center justify-center shadow-lg">
-                  <MapPin size={20} />
+                <div className="w-10 h-10 bg-brand-blue rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <MapPin size={20} className="text-white" />
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </section>
 
+
       {/* Fast Help CTA */}
       <section className="bg-gradient-to-br from-blue-900 to-brand-dark p-8 rounded-3xl text-center space-y-6 border border-white/5">
-        <h2 className="text-2xl font-bold">Need Help Fast?</h2>
-        <button className="bg-white text-brand-dark px-8 py-3 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl">
-          Call 0175162938
-        </button>
+        <h2 className="text-2xl font-bold text-white">Need Help Fast?</h2>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          {/* Phone Call */}
+          <a
+            href="tel:0175162938"
+            className="bg-white text-brand-dark px-8 py-3 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl w-full sm:w-auto"
+          >
+            Call 0175162938
+          </a>
+
+          {/* WhatsApp */}
+          <a
+            href="https://wa.me/60175162938"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#25D366] text-white px-8 py-3 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl w-full sm:w-auto flex items-center justify-center gap-2"
+          >
+            WhatsApp Us
+          </a>
+        </div>
       </section>
+
 
       <Footer />
     </div>
@@ -356,7 +387,7 @@ const ProductsScreen = () => {
 
       <div className="flex bg-brand-card p-1 rounded-2xl">
         {["All Brands", "Hikvision", "Dahua"].map((b) => (
-          <button 
+          <button
             key={b}
             onClick={() => setFilter(b)}
             className={cn("flex-1 py-2 rounded-xl text-xs font-bold transition-all", filter === b ? "bg-brand-blue text-white shadow-lg" : "text-gray-400")}
@@ -420,8 +451,8 @@ const GalleryScreen = () => {
 
       <div className="grid grid-cols-2 gap-4">
         {galleryItems.map((item, i) => (
-          <div 
-            key={i} 
+          <div
+            key={i}
             className="glass-card overflow-hidden group cursor-pointer"
             onClick={() => {
               setSelectedImage(item);
@@ -429,9 +460,9 @@ const GalleryScreen = () => {
             }}
           >
             <div className="aspect-square relative">
-              <img 
-                src={item.img} 
-                alt={item.title} 
+              <img
+                src={item.img}
+                alt={item.title}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 referrerPolicy="no-referrer"
               />
@@ -446,26 +477,26 @@ const GalleryScreen = () => {
 
       <AnimatePresence>
         {selectedImage && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center p-6"
           >
             <div className="absolute top-6 right-6 flex gap-4">
-              <button 
+              <button
                 onClick={() => setZoom(prev => Math.min(prev + 0.5, 3))}
                 className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors"
               >
                 <ZoomIn size={24} />
               </button>
-              <button 
+              <button
                 onClick={() => setZoom(prev => Math.max(prev - 0.5, 1))}
                 className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors"
               >
                 <ZoomOut size={24} />
               </button>
-              <button 
+              <button
                 onClick={() => setSelectedImage(null)}
                 className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors"
               >
@@ -474,11 +505,11 @@ const GalleryScreen = () => {
             </div>
 
             <div className="w-full max-w-2xl aspect-square overflow-hidden rounded-3xl relative">
-              <motion.img 
+              <motion.img
                 animate={{ scale: zoom }}
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                src={selectedImage.img} 
-                alt={selectedImage.title} 
+                src={selectedImage.img}
+                alt={selectedImage.title}
                 className="w-full h-full object-contain cursor-grab active:cursor-grabbing"
                 referrerPolicy="no-referrer"
               />
@@ -526,9 +557,9 @@ const ProjectsScreen = () => {
         {projects.map((p, i) => (
           <div key={i} className="glass-card overflow-hidden group cursor-pointer">
             <div className="h-48 relative">
-              <img 
-                src={p.img} 
-                alt={p.title} 
+              <img
+                src={p.img}
+                alt={p.title}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 referrerPolicy="no-referrer"
               />
@@ -563,7 +594,7 @@ const AIScreen = () => {
 
   const handleChat = async () => {
     if (!input.trim() || loading) return;
-    
+
     const userMsg = { role: "user" as const, text: input };
     setMessages(prev => [...prev, userMsg]);
     setInput("");
@@ -575,7 +606,7 @@ const AIScreen = () => {
 
     // Use search grounding for general queries if they seem like they need it
     const needsSearch = input.toLowerCase().includes("latest") || input.toLowerCase().includes("price") || input.toLowerCase().includes("news");
-    
+
     let responseText = "";
     if (needsSearch) {
       const searchRes = await searchWithGemini(fullInput);
@@ -601,13 +632,13 @@ const AIScreen = () => {
   return (
     <div className="pt-24 pb-32 px-6 h-screen flex flex-col">
       <div className="flex bg-brand-card p-1 rounded-2xl mb-4">
-        <button 
+        <button
           onClick={() => setMode("chat")}
           className={cn("flex-1 py-2 rounded-xl text-sm font-bold transition-all", mode === "chat" ? "bg-brand-blue text-white shadow-lg" : "text-gray-400")}
         >
           Chat Assistant
         </button>
-        <button 
+        <button
           onClick={() => setMode("image")}
           className={cn("flex-1 py-2 rounded-xl text-sm font-bold transition-all", mode === "image" ? "bg-brand-blue text-white shadow-lg" : "text-gray-400")}
         >
@@ -669,11 +700,11 @@ const AIScreen = () => {
               <h2 className="text-xl font-bold">AI Image Generator</h2>
               <p className="text-sm text-gray-400">Describe the security setup or electrical plan you want to visualize.</p>
             </div>
-            
+
             {generatedImage ? (
               <div className="glass-card overflow-hidden rounded-3xl group relative">
                 <img src={generatedImage} alt="Generated" className="w-full aspect-square object-cover" />
-                <button 
+                <button
                   onClick={() => setGeneratedImage(null)}
                   className="absolute top-4 right-4 bg-black/50 p-2 rounded-full backdrop-blur-sm hover:bg-black/80 transition-colors"
                 >
@@ -693,14 +724,14 @@ const AIScreen = () => {
       </div>
 
       <div className="mt-4 flex gap-2">
-        <input 
+        <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && (mode === "chat" ? handleChat() : handleImageGen())}
           placeholder={mode === "chat" ? "Ask anything..." : "A futuristic CCTV camera..."}
           className="flex-1 bg-brand-card border border-white/10 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:border-brand-blue transition-colors"
         />
-        <button 
+        <button
           onClick={mode === "chat" ? handleChat : handleImageGen}
           disabled={loading || !input.trim()}
           className="bg-brand-blue p-3 rounded-2xl text-white disabled:opacity-50 transition-all active:scale-95"
@@ -734,9 +765,9 @@ const AboutUsScreen = () => {
           <h2 className="text-xl font-bold">Our History</h2>
         </div>
         <p className="text-sm text-gray-300 leading-relaxed">
-          Founded in 2014 in Penang, Pakmike Technology started as a small electrical contracting firm. 
-          Over the years, we recognized the growing need for integrated security solutions. 
-          Today, we have grown into a leading provider of CCTV systems, smart home automation, 
+          Founded in 2014 in Penang, Pakmike Technology started as a small electrical contracting firm.
+          Over the years, we recognized the growing need for integrated security solutions.
+          Today, we have grown into a leading provider of CCTV systems, smart home automation,
           and comprehensive electrical services, serving thousands of satisfied customers across the region.
         </p>
       </section>
@@ -747,7 +778,7 @@ const AboutUsScreen = () => {
           <h2 className="text-xl font-bold">Our Mission</h2>
         </div>
         <p className="text-sm text-gray-300 leading-relaxed italic">
-          "To provide peace of mind through innovative security technology and reliable electrical engineering, 
+          "To provide peace of mind through innovative security technology and reliable electrical engineering,
           ensuring every home and business in our community is safe, connected, and efficient."
         </p>
       </section>
@@ -778,7 +809,7 @@ const AboutUsScreen = () => {
         </div>
         <h2 className="text-lg font-bold">Certified & Authorized</h2>
         <p className="text-xs text-gray-400">
-          We are an authorized dealer and certified installer for major brands including 
+          We are an authorized dealer and certified installer for major brands including
           Hikvision, Dahua, and TP-Link VIGI.
         </p>
       </section>
@@ -790,12 +821,12 @@ const AboutUsScreen = () => {
 
 const ContactScreen = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-  const [bookingData, setBookingData] = useState({ 
-    name: "", 
-    phone: "", 
-    email: "", 
-    serviceType: "CCTV Installation", 
-    dateTime: "" 
+  const [bookingData, setBookingData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    serviceType: "CCTV Installation",
+    dateTime: ""
   });
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [bookingErrors, setBookingErrors] = useState<{ [key: string]: string }>({});
@@ -813,7 +844,7 @@ const ContactScreen = () => {
       newErrors.email = "Invalid email format";
     }
     if (!formData.message.trim()) newErrors.message = "Message is required";
-    
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -828,7 +859,7 @@ const ContactScreen = () => {
       newErrors.email = "Invalid email format";
     }
     if (!bookingData.dateTime.trim()) newErrors.dateTime = "Preferred Date/Time is required";
-    
+
     setBookingErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -851,12 +882,12 @@ const ContactScreen = () => {
     await new Promise(resolve => setTimeout(resolve, 1500));
     setIsBookingSubmitting(false);
     setIsBookingSuccess(true);
-    setBookingData({ 
-      name: "", 
-      phone: "", 
-      email: "", 
-      serviceType: "CCTV Installation", 
-      dateTime: "" 
+    setBookingData({
+      name: "",
+      phone: "",
+      email: "",
+      serviceType: "CCTV Installation",
+      dateTime: ""
     });
     setTimeout(() => setIsBookingSuccess(false), 5000);
   };
@@ -895,7 +926,7 @@ const ContactScreen = () => {
         <div className="glass-card p-6 space-y-4">
           <div className="space-y-1">
             <label className="text-[10px] font-bold text-gray-400 uppercase ml-2">Service Type</label>
-            <select 
+            <select
               value={bookingData.serviceType}
               onChange={(e) => setBookingData({ ...bookingData, serviceType: e.target.value })}
               className="w-full bg-brand-card border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-brand-blue outline-none transition-all appearance-none"
@@ -912,14 +943,14 @@ const ContactScreen = () => {
             <div className="space-y-1">
               <label className="text-[10px] font-bold text-gray-400 uppercase ml-2">Preferred Date & Time</label>
               <div className="relative">
-                <input 
+                <input
                   type="datetime-local"
                   value={bookingData.dateTime}
                   onChange={(e) => setBookingData({ ...bookingData, dateTime: e.target.value })}
                   className={cn(
                     "w-full bg-brand-card border rounded-xl px-4 py-3 text-sm focus:border-brand-blue outline-none transition-all",
                     bookingErrors.dateTime ? "border-red-500/50" : "border-white/10"
-                  )} 
+                  )}
                 />
               </div>
               {bookingErrors.dateTime && <p className="text-[9px] text-red-500 ml-2 font-bold">{bookingErrors.dateTime}</p>}
@@ -929,46 +960,46 @@ const ContactScreen = () => {
           <div className="space-y-4 pt-2">
             <p className="text-xs font-bold text-brand-blue uppercase tracking-widest ml-2">Contact Information</p>
             <div className="space-y-1">
-              <input 
+              <input
                 value={bookingData.name}
                 onChange={(e) => setBookingData({ ...bookingData, name: e.target.value })}
-                placeholder="Full Name" 
+                placeholder="Full Name"
                 className={cn(
                   "w-full bg-brand-card border rounded-xl px-4 py-3 text-sm focus:border-brand-blue outline-none transition-all",
                   bookingErrors.name ? "border-red-500/50" : "border-white/10"
-                )} 
+                )}
               />
               {bookingErrors.name && <p className="text-[9px] text-red-500 ml-2 font-bold">{bookingErrors.name}</p>}
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-1">
-                <input 
+                <input
                   value={bookingData.phone}
                   onChange={(e) => setBookingData({ ...bookingData, phone: e.target.value })}
-                  placeholder="Phone Number" 
+                  placeholder="Phone Number"
                   className={cn(
                     "w-full bg-brand-card border rounded-xl px-4 py-3 text-sm focus:border-brand-blue outline-none transition-all",
                     bookingErrors.phone ? "border-red-500/50" : "border-white/10"
-                  )} 
+                  )}
                 />
                 {bookingErrors.phone && <p className="text-[9px] text-red-500 ml-2 font-bold">{bookingErrors.phone}</p>}
               </div>
               <div className="space-y-1">
-                <input 
+                <input
                   value={bookingData.email}
                   onChange={(e) => setBookingData({ ...bookingData, email: e.target.value })}
-                  placeholder="Email Address" 
+                  placeholder="Email Address"
                   className={cn(
                     "w-full bg-brand-card border rounded-xl px-4 py-3 text-sm focus:border-brand-blue outline-none transition-all",
                     bookingErrors.email ? "border-red-500/50" : "border-white/10"
-                  )} 
+                  )}
                 />
                 {bookingErrors.email && <p className="text-[9px] text-red-500 ml-2 font-bold">{bookingErrors.email}</p>}
               </div>
             </div>
           </div>
 
-          <button 
+          <button
             onClick={handleBookingSubmit}
             disabled={isBookingSubmitting}
             className="w-full py-4 bg-brand-blue rounded-2xl font-bold shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2 disabled:opacity-50 mt-4"
@@ -1027,46 +1058,46 @@ const ContactScreen = () => {
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-1">
               <label className="text-[10px] font-bold text-gray-400 uppercase ml-2">Full Name</label>
-              <input 
+              <input
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                placeholder="John Doe" 
+                placeholder="John Doe"
                 className={cn(
                   "w-full bg-brand-card border rounded-xl px-4 py-3 text-sm focus:border-brand-blue outline-none transition-all",
                   errors.name ? "border-red-500/50" : "border-white/10"
-                )} 
+                )}
               />
               {errors.name && <p className="text-[9px] text-red-500 ml-2 font-bold">{errors.name}</p>}
             </div>
             <div className="space-y-1">
               <label className="text-[10px] font-bold text-gray-400 uppercase ml-2">Email Address</label>
-              <input 
+              <input
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                placeholder="john@example.com" 
+                placeholder="john@example.com"
                 className={cn(
                   "w-full bg-brand-card border rounded-xl px-4 py-3 text-sm focus:border-brand-blue outline-none transition-all",
                   errors.email ? "border-red-500/50" : "border-white/10"
-                )} 
+                )}
               />
               {errors.email && <p className="text-[9px] text-red-500 ml-2 font-bold">{errors.email}</p>}
             </div>
           </div>
           <div className="space-y-1">
             <label className="text-[10px] font-bold text-gray-400 uppercase ml-2">Message</label>
-            <textarea 
+            <textarea
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              rows={4} 
-              placeholder="How can we help you today?" 
+              rows={4}
+              placeholder="How can we help you today?"
               className={cn(
                 "w-full bg-brand-card border rounded-xl px-4 py-3 text-sm focus:border-brand-blue outline-none resize-none transition-all",
                 errors.message ? "border-red-500/50" : "border-white/10"
-              )} 
+              )}
             />
             {errors.message && <p className="text-[9px] text-red-500 ml-2 font-bold">{errors.message}</p>}
           </div>
-          <button 
+          <button
             onClick={handleInquirySubmit}
             disabled={isSubmitting}
             className="w-full py-4 bg-gradient-to-r from-brand-blue to-blue-600 rounded-2xl font-bold shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2 disabled:opacity-50"
@@ -1094,7 +1125,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-brand-dark text-white selection:bg-brand-blue/30">
       <Header />
-      
+
       <main className="max-w-md mx-auto relative min-h-screen">
         <AnimatePresence mode="wait">
           <motion.div
