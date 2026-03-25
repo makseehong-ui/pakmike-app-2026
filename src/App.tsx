@@ -135,7 +135,7 @@ const HomeScreen = ({ setActiveTab }: { setActiveTab: (t: string) => void }) => 
       {/* Hero Section */}
       <section className="relative h-[400px] rounded-3xl overflow-hidden group">
         <img
-          src="/assets/images/unnamed.webp"
+          src="./assets/images/unnamed.webp"
           alt="Modern Building"
           className="w-full h-full object-cover brightness-50 transition-transform duration-700 group-hover:scale-105"
           referrerPolicy="no-referrer"
@@ -168,9 +168,9 @@ const HomeScreen = ({ setActiveTab }: { setActiveTab: (t: string) => void }) => 
           <span className="text-sm font-bold">Authorized Partner</span>
         </div>
         <div className="flex items-center gap-4 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all">
-          <img src="/assets/images/1280px-Hikvision_logo.svg.png" alt="Hikvision" className="h-4" referrerPolicy="no-referrer" />
+          <img src="./assets/images/1280px-Hikvision_logo.svg.png" alt="Hikvision" className="h-4" referrerPolicy="no-referrer" />
           <div className="w-px h-6 bg-white/10" />
-          <img src="/assets/images/Dahua_Technology_logo.svg.png" alt="Dahua" className="h-4" referrerPolicy="no-referrer" />
+          <img src="./assets/images/Dahua_Technology_logo.svg.png" alt="Dahua" className="h-4" referrerPolicy="no-referrer" />
         </div>
       </section>
 
@@ -198,8 +198,8 @@ const HomeScreen = ({ setActiveTab }: { setActiveTab: (t: string) => void }) => 
         </div>
         <div className="grid grid-cols-2 gap-4">
           {[
-            { brand: "HIKVISION", name: "Hybrid 6MP Varifocal 2.8mm to 12mm", img: "/assets/images/6mp-hikvision.webp" },
-            { brand: "DAHUA", name: "Dahua 5MP PTZ", img: "/assets/images/dahua.webp" },
+            { brand: "HIKVISION", name: "Hybrid 6MP Varifocal 2.8mm to 12mm", img: "./assets/images/6mp-hikvision.webp" },
+            { brand: "DAHUA", name: "Dahua 5MP PTZ", img: "./assets/images/dahua.webp" },
           ].map((m, i) => (
             <div key={i} className="glass-card p-4 space-y-3 group cursor-pointer" onClick={() => setActiveTab("products")}>
               <div className="h-24 bg-brand-dark rounded-xl overflow-hidden">
@@ -243,7 +243,7 @@ const HomeScreen = ({ setActiveTab }: { setActiveTab: (t: string) => void }) => 
         <div className="glass-card overflow-hidden group cursor-pointer" onClick={() => setActiveTab("projects")}>
           <div className="h-48 relative">
             <img
-              src="/assets/images/warehouse-5mp.webp"
+              src="./assets/images/warehouse-5mp.webp"
               alt="Industrial Warehouse Surveillance"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               referrerPolicy="no-referrer"
@@ -334,7 +334,7 @@ const HomeScreen = ({ setActiveTab }: { setActiveTab: (t: string) => void }) => 
               className="glass-card p-4 relative overflow-hidden h-32 flex items-end group cursor-pointer border border-white/5 hover:border-brand-blue/50 transition-all"
             >
               <img
-                src={`/assets/images/google-maps.svg`}
+                src={`./assets/images/google-maps.svg`}
                 alt={city}
                 className="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition-opacity"
                 referrerPolicy="no-referrer"
@@ -388,10 +388,10 @@ const HomeScreen = ({ setActiveTab }: { setActiveTab: (t: string) => void }) => 
 const ProductsScreen = () => {
   const [filter, setFilter] = useState("All Brands");
   const products = [
-    { name: "Hybrid", brand: "Hikvision", res: "6MP / 3K Res", night: "30m Color", lens: "varifocal", weather: "IP67", img: "/assets/images/6mp-hikvision.webp" },
-    { name: "5MP PTZ", brand: "Dahua", res: "5MP / 3K Res", night: "30m Color", lens: "Fixed", weather: "IP67", img: "/assets/images/dahua.webp" },
-    { name: "5mp Ptz", brand: "Ezviz", res: "4MP / 2K Res", night: "30m Color", lens: "Fixed", weather: "IP67", img: "/assets/images/ezviz-h7c.webp" },
-    { name: "4MP Smart Dual lens", brand: "Ezviz", res: "4MP / 3K Res", night: "30m Color", lens: "Fixed", weather: "IP67", img: "/assets/images/ezviz-h90.webp" },
+    { name: "Hybrid", brand: "Hikvision", res: "6MP / 3K Res", night: "30m Color", lens: "varifocal", weather: "IP67", img: "./assets/images/6mp-hikvision.webp" },
+    { name: "5MP PTZ", brand: "Dahua", res: "5MP / 3K Res", night: "30m Color", lens: "Fixed", weather: "IP67", img: "./assets/images/dahua.webp" },
+    { name: "5mp Ptz", brand: "Ezviz", res: "4MP / 2K Res", night: "30m Color", lens: "Fixed", weather: "IP67", img: "./assets/images/ezviz-h7c.webp" },
+    { name: "4MP Smart Dual lens", brand: "Ezviz", res: "4MP / 3K Res", night: "30m Color", lens: "Fixed", weather: "IP67", img: "./assets/images/ezviz-h90.webp" },
   ];
 
   const filtered = filter === "All Brands" ? products : products.filter(p => p.brand === filter);
@@ -452,12 +452,12 @@ const GalleryScreen = () => {
   const [zoom, setZoom] = useState(1);
 
   const galleryItems = [
-    { title: "CCTV Installation", desc: "High-definition surveillance for Lunas Caltex Petrol Station.", img: "/assets/images/daytime-cetntreview-lunas.webp" },
-    { title: "Smart Home Setup", desc: "Integrated lighting and security control.", img: "/assets/images/smart-home.webp" },
-    { title: "Industrial Wiring", desc: "Complex electrical panel for a Caltex Station.", img: "/assets/images/wiring-indusrial.webp" },
-    { title: "Solar Powered cameras", desc: "Sustainable energy solution for a villa.", img: "/assets/images/solar-powered.webp" },
-    { title: "Network Infrastructure", desc: "Robust data cabling for a corporate office.", img: "/assets/images/network-infrastrcture.webp" },
-    { title: "Access Control", desc: "Biometric security system implementation.", img: "/assets/images/biometric-hikvision.webp" },
+    { title: "CCTV Installation", desc: "High-definition surveillance for Lunas Caltex Petrol Station.", img: "./assets/images/daytime-cetntreview-lunas.webp" },
+    { title: "Smart Home Setup", desc: "Integrated lighting and security control.", img: "./assets/images/smart-home.webp" },
+    { title: "Industrial Wiring", desc: "Complex electrical panel for a Caltex Station.", img: "./assets/images/wiring-indusrial.webp" },
+    { title: "Solar Powered cameras", desc: "Sustainable energy solution for a villa.", img: "./assets/images/solar-powered.webp" },
+    { title: "Network Infrastructure", desc: "Robust data cabling for a corporate office.", img: "./assets/images/network-infrastrcture.webp" },
+    { title: "Access Control", desc: "Biometric security system implementation.", img: "./assets/images/biometric-hikvision.webp" },
   ];
 
   return (
@@ -548,9 +548,9 @@ const GalleryScreen = () => {
 
 const ProjectsScreen = () => {
   const projects = [
-    { title: "Barrier Gate System", location: "Sg Penang, Malaysia", img: "/assets/images/barrier-system.webp" },
-    { title: "Lightning Arrestor", location: "Prai,Penang, Malaysia", img: "/assets/images/lightning-arrestor.webp" },
-    { title: "Industrial Smart Monitoring", location: "Simpang Ampat, Penang, Malaysia", img: "/assets/images/workshop-5mp.webp" },
+    { title: "Barrier Gate System", location: "Sg Penang, Malaysia", img: "./assets/images/barrier-system.webp" },
+    { title: "Lightning Arrestor", location: "Prai,Penang, Malaysia", img: "./assets/images/lightning-arrestor.webp" },
+    { title: "Industrial Smart Monitoring", location: "Simpang Ampat, Penang, Malaysia", img: "./assets/images/workshop-5mp.webp" },
   ];
 
   return (
