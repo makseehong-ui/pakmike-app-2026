@@ -70,13 +70,13 @@ const Navbar = ({ activeTab, setActiveTab }: { activeTab: string, setActiveTab: 
   ];
 
   return (
-    <nav className="fixed bottom-6 left-1/2 -translate-x-1/2 glass-card px-6 py-3 flex items-center gap-8 z-50 shadow-2xl">
+    <nav className="fixed bottom-6 left-1/2 -translate-x-1/2 glass-card px-6 py-3 flex items-center gap-8 z-50 shadow-2xl max-w-[90vw] overflow-x-auto no-scrollbar">
       {tabs.map((tab) => (
         <button
           key={tab.id}
           onClick={() => setActiveTab(tab.id)}
           className={cn(
-            "flex flex-col items-center gap-1 transition-all duration-300",
+            "flex flex-col items-center gap-1 transition-all duration-300 shrink-0",
             activeTab === tab.id ? "text-brand-blue scale-110" : "text-gray-400 hover:text-white"
           )}
         >
