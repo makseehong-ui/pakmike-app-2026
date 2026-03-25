@@ -370,10 +370,10 @@ const HomeScreen = ({ setActiveTab }: { setActiveTab: (t: string) => void }) => 
 const ProductsScreen = () => {
   const [filter, setFilter] = useState("All Brands");
   const products = [
-    { name: "ColorVu Turret", brand: "Hikvision", res: "4MP / 2K Res", night: "30m Color", lens: "Fixed", weather: "IP67", img: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=400&auto=format&fit=crop" },
-    { name: "5MP WizSense PTZ", brand: "Dahua", res: "4MP / 2K Res", night: "30m Color", lens: "Fixed", weather: "IP67", img: "https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=400&auto=format&fit=crop" },
-    { name: "8MP AI Bullet", brand: "Hikvision", res: "4MP / 2K Res", night: "30m Color", lens: "Fixed", weather: "IP67", img: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=400&auto=format&fit=crop" },
-    { name: "4MP Smart Dual Dome", brand: "Dahua", res: "4MP / 2K Res", night: "30m Color", lens: "Fixed", weather: "IP67", img: "https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=400&auto=format&fit=crop" },
+    { name: "Hybrid", brand: "Hikvision", res: "6MP / 3K Res", night: "30m Color", lens: "varifocal", weather: "IP67", img: "public/assets/images/6mp-hikvision.webp" },
+    { name: "5MP PTZ", brand: "Dahua", res: "5MP / 3K Res", night: "30m Color", lens: "Fixed", weather: "IP67", img: "public/assets/images/dahua.webp" },
+    { name: "5mp Ptz", brand: "Ezviz", res: "4MP / 2K Res", night: "30m Color", lens: "Fixed", weather: "IP67", img: "public/assets/images/ezviz-h7c.webp" },
+    { name: "4MP Smart Dual lens", brand: "Ezviz", res: "4MP / 3K Res", night: "30m Color", lens: "Fixed", weather: "IP67", img: "public/assets/images/ezviz-h90.webp" },
   ];
 
   const filtered = filter === "All Brands" ? products : products.filter(p => p.brand === filter);
@@ -434,12 +434,12 @@ const GalleryScreen = () => {
   const [zoom, setZoom] = useState(1);
 
   const galleryItems = [
-    { title: "CCTV Installation", desc: "High-definition surveillance for a retail store.", img: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=800&auto=format&fit=crop" },
-    { title: "Smart Home Setup", desc: "Integrated lighting and security control.", img: "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800&auto=format&fit=crop" },
-    { title: "Industrial Wiring", desc: "Complex electrical panel for a factory.", img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=800&auto=format&fit=crop" },
-    { title: "Solar Panel Integration", desc: "Sustainable energy solution for a villa.", img: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=800&auto=format&fit=crop" },
-    { title: "Network Infrastructure", desc: "Robust data cabling for a corporate office.", img: "https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?q=80&w=800&auto=format&fit=crop" },
-    { title: "Access Control", desc: "Biometric security system implementation.", img: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=800&auto=format&fit=crop" },
+    { title: "CCTV Installation", desc: "High-definition surveillance for Lunas Caltex Petrol Station.", img: "public/assets/images/daytime-cetntreview-lunas.webp" },
+    { title: "Smart Home Setup", desc: "Integrated lighting and security control.", img: "public/assets/images/smart-home.webp" },
+    { title: "Industrial Wiring", desc: "Complex electrical panel for a Caltex Station.", img: "public/assets/images/wiring-indusrial.webp" },
+    { title: "Solar Powered cameras", desc: "Sustainable energy solution for a villa.", img: "public/assets/images/solar-powered.webp" },
+    { title: "Network Infrastructure", desc: "Robust data cabling for a corporate office.", img: "public/assets/images/network-infrastrcture.webp" },
+    { title: "Access Control", desc: "Biometric security system implementation.", img: "public/assets/images/biometric-hikvision.webp" },
   ];
 
   return (
@@ -530,9 +530,9 @@ const GalleryScreen = () => {
 
 const ProjectsScreen = () => {
   const projects = [
-    { title: "Industrial Warehouse Surveillance", location: "Lagos, Nigeria", img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=2000&auto=format&fit=crop" },
-    { title: "Corporate Office Power Grid", location: "Abuja, Nigeria", img: "https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?q=80&w=2000&auto=format&fit=crop" },
-    { title: "Residential Smart Monitoring", location: "Lekki, Lagos", img: "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=2000&auto=format&fit=crop" },
+    { title: "Barrier Gate System", location: "Sg Penang, Malaysia", img: "public/assets/images/barrier-system.webp" },
+    { title: "Lightning Arrestor", location: "Prai,Penang, Malaysia", img: "public/assets/images/lightning-arrestor.webp" },
+    { title: "Industrial Smart Monitoring", location: "Simpang Ampat, Penang, Malaysia", img: "public/assets/images/workshop-5mp.webp" },
   ];
 
   return (
@@ -756,7 +756,7 @@ const AboutUsScreen = () => {
     <div className="pt-24 pb-32 px-6 space-y-12">
       <section className="text-center space-y-4">
         <h1 className="text-3xl font-bold">About Pakmike Technology</h1>
-        <p className="text-gray-400 text-sm">Your trusted partner in security and electrical solutions since 2014.</p>
+        <p className="text-gray-400 text-sm">Your trusted partner in security and electrical solutions since 2012.</p>
       </section>
 
       <section className="glass-card p-6 space-y-4">
@@ -765,9 +765,9 @@ const AboutUsScreen = () => {
           <h2 className="text-xl font-bold">Our History</h2>
         </div>
         <p className="text-sm text-gray-300 leading-relaxed">
-          Founded in 2014 in Penang, Pakmike Technology started as a small electrical contracting firm.
+          Founded in 2012 in Penang, Pakmike Technology started as a small electrical contracting firm.
           Over the years, we recognized the growing need for integrated security solutions.
-          Today, we have grown into a leading provider of CCTV systems, smart home automation,
+          Today, we are in collaboration with leading providers for CCTV systems, smart home automation,
           and comprehensive electrical services, serving thousands of satisfied customers across the region.
         </p>
       </section>
@@ -935,7 +935,7 @@ const ContactScreen = () => {
               <option>Electrical Wiring</option>
               <option>Smart Home Setup</option>
               <option>Maintenance & Repair</option>
-              <option>Security Audit</option>
+              <option>Door Access System</option>
             </select>
           </div>
 
