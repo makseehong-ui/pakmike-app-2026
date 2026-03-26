@@ -435,16 +435,30 @@ const ProductsScreen = () => {
               <div className="flex items-center gap-1"><Settings size={10} /> {p.lens}</div>
               <div className="flex items-center gap-1"><Shield size={10} /> {p.weather}</div>
             </div>
-            <button className="w-full py-2 bg-brand-blue/10 hover:bg-brand-blue text-brand-blue hover:text-white rounded-xl text-[10px] font-bold transition-all">
-              Inquire
-            </button>
+            <a
+              href={`https://wa.me/60175162938?text=Hello%2C%20I%20am%20interested%20in%20the%20${encodeURIComponent(p.brand + " " + p.name)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full"
+            >
+              <button className="w-full py-2 bg-brand-blue/10 hover:bg-brand-blue text-brand-blue hover:text-white rounded-xl text-[10px] font-bold transition-all">
+                Inquire
+              </button>
+            </a>
           </div>
         ))}
       </div>
 
       <div className="glass-card p-6 text-center space-y-4">
         <h3 className="font-bold">Need a custom quote?</h3>
-        <button className="w-full py-3 bg-brand-blue rounded-2xl font-bold text-sm shadow-lg">Get Free Quote</button>
+        <a
+          href="https://wa.me/60175162938?text=Hello%2C%20I%20would%20like%20to%20get%20a%20free%20quote."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full"
+        >
+          <button className="w-full py-3 bg-brand-blue rounded-2xl font-bold text-sm shadow-lg">Get Free Quote</button>
+        </a>
       </div>
 
       <Footer />
