@@ -140,7 +140,7 @@ const HomeScreen = ({ setActiveTab }: { setActiveTab: (t: string) => void }) => 
       {/* Hero Section */}
       <section className="relative h-[400px] rounded-3xl overflow-hidden group">
         <img
-          src="./assets/images/penang-bridge.webp"
+          src="./assets/images/The-Top-Komtar-Picks.webp"
           alt="Modern Building"
           className="w-full h-full object-cover brightness-50 transition-transform duration-700 group-hover:scale-105"
           referrerPolicy="no-referrer"
