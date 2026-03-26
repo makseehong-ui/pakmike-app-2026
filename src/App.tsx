@@ -96,9 +96,9 @@ const Header = () => (
       </div>
       <span className="font-bold tracking-tight text-lg">Pakmike Technology</span>
     </div>
-    <a 
-      href="https://wa.me/60175162938" 
-      target="_blank" 
+    <a
+      href="https://wa.me/60175162938"
+      target="_blank"
       rel="noopener noreferrer"
       className="bg-brand-blue hover:bg-blue-600 text-white px-4 py-1.5 rounded-full text-sm font-semibold transition-colors blue-glow"
     >
@@ -140,7 +140,7 @@ const HomeScreen = ({ setActiveTab }: { setActiveTab: (t: string) => void }) => 
       {/* Hero Section */}
       <section className="relative h-[400px] rounded-3xl overflow-hidden group">
         <img
-          src="./assets/images/unnamed.webp"
+          src="./assets/images/penang-bridge.webp"
           alt="Modern Building"
           className="w-full h-full object-cover brightness-50 transition-transform duration-700 group-hover:scale-105"
           referrerPolicy="no-referrer"
