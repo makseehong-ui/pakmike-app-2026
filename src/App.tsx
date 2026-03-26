@@ -225,9 +225,9 @@ const HomeScreen = ({ setActiveTab }: { setActiveTab: (t: string) => void }) => 
         <h2 className="text-2xl font-bold text-center">Why Choose Us</h2>
         <div className="grid grid-cols-1 gap-4">
           {[
-            { icon: Shield, title: "Expert Solutions", desc: "We provide when you to detect and hums our services." },
-            { icon: Clock, title: "24/7 Support", desc: "Our nextenow tomolens seit and teonthake vornnonir solutions." },
-            { icon: CircleDollarSign, title: "Transparent Pricing", desc: "Transparent pricing are sible for transparent pricing." },
+            { icon: Shield, title: "Expert Solutions", desc: "We provide the advanced vision you need to detect and mitigate risks in real-time." },
+            { icon: Clock, title: "Always-On IT Assistance", desc: "Our dedicated team is available to provide seamless solutions and expert assistance whenever you need it." },
+            { icon: CircleDollarSign, title: "Transparent Pricing", desc: "No hidden fees, no surprises. We provide clear, upfront pricing for all our surveillance and IT services, ensuring you always know exactly what you’re paying for" },
           ].map((item, i) => (
             <div key={i} className="glass-card p-6 flex items-start gap-4">
               <div className="w-10 h-10 bg-brand-blue/20 rounded-full flex items-center justify-center text-brand-blue shrink-0">
